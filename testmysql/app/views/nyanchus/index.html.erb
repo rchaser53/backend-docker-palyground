@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Nyanchus</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nyanchus.each do |nyanchu| %>
+      <tr>
+        <td><%= link_to 'Show', nyanchu %></td>
+        <td><%= link_to 'Edit', edit_nyanchu_path(nyanchu) %></td>
+        <td><%= link_to 'Destroy', nyanchu, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Nyanchu', new_nyanchu_path %>

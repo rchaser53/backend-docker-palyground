@@ -1,0 +1,2 @@
+class Nyanchu < ApplicationRecord
+end
