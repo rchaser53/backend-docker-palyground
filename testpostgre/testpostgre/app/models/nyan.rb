@@ -1,0 +1,2 @@
+class Nyan < ApplicationRecord
+end

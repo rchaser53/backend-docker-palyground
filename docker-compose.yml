@@ -7,11 +7,10 @@
 #    - "3306:3306"
 
 rails:
-  image: "ruby:2.3"
+  image: "rails:latest"
   container_name: "rails"
   volumes:
-    - "~/Desktop/backend-docker-palyground/Gemfile:/app/Gemfile"
-    - "~/Desktop/backend-docker-palyground/testmysql:/app/testmysql"
+    - "~/Desktop/backend-docker-palyground/testpostgre:/app"
   tty: true
   ports:
     - "3000:3000"
