@@ -1,0 +1,16 @@
+マジで操作方法が覚えきれないので雑にメモる
+徐々にshellにするなり
+docker-compose.ymlやImageにするなりする
+
+
+・server 起動 /etc/init.d/# sh postgresql start
+・psqlとかはroot実行できない。ユーザ追加すること
+    面倒ならばsu postgres -c psqlでもいける。
+    apt-get install postgresqlの際にpostgresというユーザを作ってくれているっぽい
+・rails new XXX -d postgres のデフォルトの設定だとrootというユーザを使うくさい
+  => そんなユーザはいないし、当然roleも何もついてないのでpsqlでroleを追加するとかすること
+  => というかちゃんとユーザ作って、railsの設定を弄ったほうが良い
+
+・/usr/lib/postgresql/9.4/binをPATHに追加
+・rails server -b 0.0.0.0とかで開けるportのhostをしっかりと指定すること
+
