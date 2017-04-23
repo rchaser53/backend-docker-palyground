@@ -12,5 +12,7 @@ services:
     volumes:
       - "~/Desktop/backend-docker-palyground/testpostgre:/app"
     tty: true
+    working_dir: "/app"
+    command: bash -c "bundle install && rails server -b 0.0.0.0"
     ports:
       - "3000:3000"
